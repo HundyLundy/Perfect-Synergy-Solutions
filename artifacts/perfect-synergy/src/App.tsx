@@ -207,7 +207,9 @@ function FeedCard({ logo, alt, name, tagline, pageUrl, accentColor, bgGradient, 
 
       {/* Card header */}
       <div className="px-6 py-5 flex items-center gap-4" style={{ background: bgGradient }}>
-        <img src={logo} alt={alt} className="h-10 object-contain" style={{ filter: "brightness(0) invert(1)" }} />
+        <div className="bg-white/15 rounded-xl p-1.5 flex-shrink-0">
+          <img src={logo} alt={alt} className="h-8 object-contain" style={{ maxWidth: 120 }} />
+        </div>
         <div>
           <p className="font-bold text-white text-base leading-tight">{name}</p>
           <p className="text-white/70 text-xs mt-0.5">{tagline}</p>
