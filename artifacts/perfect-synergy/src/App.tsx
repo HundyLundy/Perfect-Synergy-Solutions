@@ -329,7 +329,7 @@ export default function App() {
 
         <div className="max-w-4xl mx-auto rounded-2xl overflow-hidden animate-slide-up delay-200" style={{ background: "white", border: `1px solid ${BRAND_BLUE}15`, boxShadow: "0 8px 40px rgba(3,116,167,0.10)" }}>
           <img
-            src="/synergy-graphic.png"
+            src={`/synergy-graphic.png?v=${Date.now()}`}
             alt="Perfect Parking and Perfect Water Valve mascots handing money to a happy building owner"
             className="w-full object-cover"
             style={{ maxHeight: "480px", objectPosition: "center" }}
