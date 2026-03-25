@@ -149,7 +149,10 @@ export default function App() {
       >
         <div className="flex items-center gap-3">
           <div className="w-2 h-2 rounded-full" style={{ background: GOLD }} />
-          <span className="text-white font-bold tracking-wide text-sm md:text-base">Perfect Synergy Partners</span>
+          <div>
+            <span className="text-white font-bold tracking-wide text-sm md:text-base">Perfect Synergy Solutions</span>
+            <span className="hidden md:inline text-white/40 text-xs ml-2">perfectsynergypartners.com</span>
+          </div>
         </div>
         <div className="hidden md:flex items-center gap-6 text-sm">
           <a href="https://perfectparking.com" target="_blank" rel="noopener noreferrer"
@@ -368,8 +371,13 @@ export default function App() {
         style={{ background: BRAND_BLUE }}
       >
         <div className="max-w-2xl mx-auto">
+          <p className="text-white font-bold text-lg mb-1">Perfect Synergy Solutions</p>
+          <p className="text-white/50 text-xs mb-5 italic">
+            (Yes, we're perfectsynergypartners.com. perfectsynergysolutions.com was taken.<br />
+            We'd like a word with whoever has it. 😤)
+          </p>
           <p className="text-white/70 text-sm mb-6">
-            Perfect Synergy Partners — Making commercial properties run smoother,<br className="hidden md:block" />
+            Making commercial properties run smoother —<br className="hidden md:block" />
             one parking spot and water valve at a time.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm mb-6">
@@ -394,7 +402,7 @@ export default function App() {
             </a>
           </div>
           <p className="text-white/30 text-xs">
-            © {new Date().getFullYear()} Perfect Synergy Partners. All rights reserved.
+            © {new Date().getFullYear()} Perfect Synergy Solutions. All rights reserved.
             No parking spots were harmed.
           </p>
         </div>
