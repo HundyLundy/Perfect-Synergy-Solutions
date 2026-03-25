@@ -74,55 +74,6 @@ function CompanyCard({
   );
 }
 
-/* ── Text-chat pitch ────────────────────────────────────────── */
-function ChatPitch() {
-  const messages = [
-    { side: "them", text: "🚗 Your parking is officially generating revenue. You're welcome.", delay: "msg-1" },
-    { side: "you",  text: "This is incredible. I'm telling every GM I know.", delay: "msg-2" },
-    { side: "them", text: "One quick question — what's your monthly water bill looking like?", delay: "msg-3" },
-    { side: "you",  text: "...random. Like $10,000-ish? Why?", delay: "msg-4" },
-    { side: "them", text: "No reason. We can just take ~20% of that off your hands. 💧 One valve. Done.", delay: "msg-5" },
-    { side: "you",  text: "Wait. $2,000 a month? From a VALVE?!", delay: "msg-6" },
-  ];
-
-  return (
-    <div
-      className="rounded-2xl p-6 md:p-8 max-w-lg mx-auto"
-      style={{ background: "#f0f4f8", border: "1px solid #d0dce8" }}
-    >
-      {/* Chat header */}
-      <div className="flex items-center gap-3 pb-4 mb-4" style={{ borderBottom: "1px solid #d0dce8" }}>
-        <div className="w-9 h-9 rounded-full flex items-center justify-center text-white text-sm font-bold" style={{ background: BRAND_BLUE }}>PS</div>
-        <div>
-          <p className="text-sm font-semibold text-slate-700">Perfect Synergy Partners</p>
-          <p className="text-xs text-green-500 font-medium">● Online — and definitely not about to upsell you</p>
-        </div>
-      </div>
-
-      {/* Messages */}
-      <div className="space-y-3">
-        {messages.map((m, i) => (
-          <div key={i} className={`flex ${m.side === "you" ? "justify-end" : "justify-start"}`}>
-            <div
-              className={`msg-bubble ${m.delay} px-4 py-2.5 rounded-2xl max-w-[80%] text-sm leading-relaxed`}
-              style={
-                m.side === "them"
-                  ? { background: "white", color: "#1a2a3a", boxShadow: "0 1px 4px rgba(0,0,0,0.08)", borderBottomLeftRadius: "4px" }
-                  : { background: BRAND_BLUE, color: "white", borderBottomRightRadius: "4px" }
-              }
-            >
-              {m.text}
-            </div>
-          </div>
-        ))}
-      </div>
-
-      <p className="text-center text-xs text-slate-400 mt-5 italic">
-        Every. Single. Time. 😏
-      </p>
-    </div>
-  );
-}
 
 /* ── Synergy Equation ───────────────────────────────────────── */
 function SynergyEquation() {
@@ -358,29 +309,34 @@ export default function App() {
         </div>
       </section>
 
-      {/* ── THE PITCH ──────────────────────────────────────── */}
+      {/* ── SYNERGY GRAPHIC ──────────────────────────────── */}
       <section
         className="px-4 py-20"
-        style={{ background: `linear-gradient(135deg, ${BRAND_BLUE}0a, ${TEAL}10)` }}
+        style={{ background: `linear-gradient(135deg, ${BRAND_BLUE}08, ${TEAL}0d)` }}
       >
-        <div className="max-w-3xl mx-auto text-center mb-10 animate-slide-up">
-          <p
-            className="text-xs font-bold uppercase tracking-widest mb-3"
-            style={{ color: BRAND_BLUE }}
-          >
-            How every conversation goes
+        <div className="max-w-4xl mx-auto text-center mb-10 animate-slide-up">
+          <p className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: BRAND_BLUE }}>
+            The full picture
           </p>
           <h2 className="text-3xl md:text-4xl font-black mb-3" style={{ color: "#1a2a3a" }}>
-            It always starts with parking.
+            We literally put money back in your pocket.
           </h2>
-          <p className="text-slate-500 text-base">
-            And then someone asks <em>one question</em> about their water bill.
+          <p className="text-slate-500 text-base max-w-xl mx-auto">
+            Monetize your parking. Slash your water bill. 
+            Your CFO gets a raise. <span className="italic">(At least that's how we see it.)</span>
           </p>
         </div>
 
-        <ChatPitch />
+        <div className="max-w-4xl mx-auto rounded-2xl overflow-hidden animate-slide-up delay-200" style={{ background: "white", border: `1px solid ${BRAND_BLUE}15`, boxShadow: "0 8px 40px rgba(3,116,167,0.10)" }}>
+          <img
+            src="/synergy-graphic.png"
+            alt="Perfect Parking and Perfect Water Valve mascots handing money to a happy building owner"
+            className="w-full object-cover"
+            style={{ maxHeight: "480px", objectPosition: "center" }}
+          />
+        </div>
 
-        <p className="text-center text-slate-400 text-sm mt-6 italic animate-slide-up delay-500">
+        <p className="text-center text-slate-400 text-sm mt-5 italic animate-slide-up delay-400">
           That's not upselling. That's just being an exceptionally good partner.
         </p>
       </section>
