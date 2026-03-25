@@ -73,67 +73,67 @@
   --elevate-1: rgba(0,0,0, .03);
   --elevate-2: rgba(0,0,0, .08);
 
-  /* Deep navy background */
-  --background: 220 45% 8%;
-  --foreground: 210 40% 96%;
+  /* Light blue-grey background */
+  --background: 213 40% 94%;
+  --foreground: 213 40% 15%;
 
-  --border: 215 30% 20%;
-  --input: 215 30% 20%;
-  --ring: 196 80% 55%;
+  --border: 213 25% 82%;
+  --input: 213 25% 82%;
+  --ring: 200 78% 35%;
 
-  --card: 220 40% 11%;
-  --card-foreground: 210 40% 96%;
-  --card-border: 215 30% 18%;
+  --card: 0 0% 100%;
+  --card-foreground: 213 40% 15%;
+  --card-border: 213 25% 85%;
 
-  --sidebar: 220 40% 11%;
-  --sidebar-foreground: 210 40% 96%;
-  --sidebar-border: 215 30% 18%;
-  --sidebar-primary: 196 80% 50%;
+  --sidebar: 213 40% 94%;
+  --sidebar-foreground: 213 40% 15%;
+  --sidebar-border: 213 25% 82%;
+  --sidebar-primary: 200 78% 34%;
   --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 215 35% 16%;
-  --sidebar-accent-foreground: 210 40% 96%;
-  --sidebar-ring: 196 80% 55%;
+  --sidebar-accent: 213 30% 88%;
+  --sidebar-accent-foreground: 213 40% 15%;
+  --sidebar-ring: 200 78% 35%;
 
-  --popover: 220 40% 11%;
-  --popover-foreground: 210 40% 96%;
-  --popover-border: 215 30% 18%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 213 40% 15%;
+  --popover-border: 213 25% 85%;
 
-  /* Ocean blue primary */
-  --primary: 196 80% 50%;
+  /* Brand blue #0374a7 */
+  --primary: 200 78% 34%;
   --primary-foreground: 0 0% 100%;
 
-  --secondary: 215 35% 16%;
-  --secondary-foreground: 210 40% 96%;
+  --secondary: 213 30% 88%;
+  --secondary-foreground: 213 40% 20%;
 
-  --muted: 215 35% 14%;
-  --muted-foreground: 215 25% 55%;
+  --muted: 213 30% 90%;
+  --muted-foreground: 213 25% 45%;
 
-  /* Turquoise accent */
-  --accent: 174 72% 45%;
+  /* Teal/green accent */
+  --accent: 174 60% 38%;
   --accent-foreground: 0 0% 100%;
 
   --destructive: 0 72% 51%;
   --destructive-foreground: 0 0% 100%;
 
-  --chart-1: 196 80% 50%;
-  --chart-2: 174 72% 45%;
-  --chart-3: 46 90% 60%;
-  --chart-4: 220 70% 50%;
-  --chart-5: 196 60% 35%;
+  --chart-1: 200 78% 34%;
+  --chart-2: 174 60% 38%;
+  --chart-3: 47 100% 44%;
+  --chart-4: 213 70% 50%;
+  --chart-5: 200 60% 55%;
 
   --app-font-sans: 'Inter', sans-serif;
   --app-font-serif: Georgia, serif;
   --app-font-mono: Menlo, monospace;
   --radius: .5rem;
 
-  --shadow-2xs: 0px 2px 4px 0px rgba(0,0,0,0.3);
-  --shadow-xs: 0px 2px 4px 0px rgba(0,0,0,0.3);
-  --shadow-sm: 0px 2px 8px 0px rgba(0,0,0,0.4), 0px 1px 2px -1px rgba(0,0,0,0.4);
-  --shadow: 0px 4px 12px 0px rgba(0,0,0,0.4), 0px 1px 2px -1px rgba(0,0,0,0.4);
-  --shadow-md: 0px 4px 16px 0px rgba(0,0,0,0.5), 0px 2px 4px -1px rgba(0,0,0,0.5);
-  --shadow-lg: 0px 8px 24px 0px rgba(0,0,0,0.5), 0px 4px 6px -1px rgba(0,0,0,0.5);
-  --shadow-xl: 0px 12px 32px 0px rgba(0,0,0,0.6), 0px 8px 10px -1px rgba(0,0,0,0.6);
-  --shadow-2xl: 0px 20px 48px 0px rgba(0,0,0,0.6);
+  --shadow-2xs: 0px 1px 3px 0px rgba(0,0,0,0.08);
+  --shadow-xs: 0px 1px 3px 0px rgba(0,0,0,0.08);
+  --shadow-sm: 0px 2px 6px 0px rgba(0,0,0,0.10), 0px 1px 2px -1px rgba(0,0,0,0.08);
+  --shadow: 0px 4px 12px 0px rgba(0,0,0,0.10), 0px 1px 2px -1px rgba(0,0,0,0.08);
+  --shadow-md: 0px 4px 16px 0px rgba(0,0,0,0.12), 0px 2px 4px -1px rgba(0,0,0,0.08);
+  --shadow-lg: 0px 8px 24px 0px rgba(0,0,0,0.12), 0px 4px 6px -1px rgba(0,0,0,0.08);
+  --shadow-xl: 0px 12px 32px 0px rgba(0,0,0,0.14), 0px 8px 10px -1px rgba(0,0,0,0.08);
+  --shadow-2xl: 0px 20px 48px 0px rgba(0,0,0,0.16);
   --tracking-normal: 0em;
   --spacing: 0.25rem;
 
@@ -152,19 +152,14 @@
   }
   body {
     @apply font-sans antialiased bg-background text-foreground;
+    background-color: #e8eff7;
   }
 }
 
-/* Custom animations */
+/* Animations */
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-12px); }
-}
-
-@keyframes water-drop {
-  0% { transform: translateY(-20px) scaleY(0.8); opacity: 0; }
-  40% { opacity: 1; }
-  100% { transform: translateY(60px) scaleY(1.2); opacity: 0; }
+  50% { transform: translateY(-10px); }
 }
 
 @keyframes shimmer {
@@ -172,30 +167,8 @@
   100% { background-position: 200% center; }
 }
 
-@keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 20px rgba(0, 188, 212, 0.3); }
-  50% { box-shadow: 0 0 40px rgba(0, 188, 212, 0.7), 0 0 60px rgba(0, 188, 212, 0.3); }
-}
-
-@keyframes car-drive {
-  0% { transform: translateX(120px); opacity: 0; }
-  15% { opacity: 1; }
-  85% { opacity: 1; }
-  100% { transform: translateX(-120px); opacity: 0; }
-}
-
-@keyframes fountain-arc {
-  0%, 100% { transform: scaleY(1) scaleX(1); }
-  50% { transform: scaleY(1.15) scaleX(0.9); }
-}
-
-@keyframes sparkle {
-  0%, 100% { opacity: 0; transform: scale(0); }
-  50% { opacity: 1; transform: scale(1); }
-}
-
 @keyframes slide-up {
-  from { opacity: 0; transform: translateY(30px); }
+  from { opacity: 0; transform: translateY(28px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
@@ -204,20 +177,19 @@
   to { opacity: 1; }
 }
 
-@keyframes gradient-shift {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+@keyframes sparkle {
+  0%, 100% { opacity: 0; transform: scale(0.5); }
+  50% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes message-pop {
+  from { opacity: 0; transform: translateY(12px) scale(0.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
 .animate-float { animation: float 4s ease-in-out infinite; }
-.animate-float-delayed { animation: float 4s ease-in-out infinite 1.5s; }
-.animate-pulse-glow { animation: pulse-glow 3s ease-in-out infinite; }
-.animate-shimmer { animation: shimmer 3s linear infinite; }
-.animate-gradient { animation: gradient-shift 6s ease infinite; background-size: 200% 200%; }
-.animate-slide-up { animation: slide-up 0.8s ease-out both; }
+.animate-slide-up { animation: slide-up 0.7s ease-out both; }
 .animate-fade-in { animation: fade-in 1s ease-out both; }
-.animate-car { animation: car-drive 5s ease-in-out infinite 1s; }
-.animate-fountain { animation: fountain-arc 2s ease-in-out infinite; }
 
 .delay-100 { animation-delay: 0.1s; }
 .delay-200 { animation-delay: 0.2s; }
@@ -229,41 +201,52 @@
 .delay-800 { animation-delay: 0.8s; }
 
 .shimmer-text {
-  background: linear-gradient(90deg, #29b6f6, #4dd0e1, #e6c74a, #29b6f6);
+  background: linear-gradient(90deg, #0374a7, #1aa3c8, #dec600, #0374a7);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: shimmer 4s linear infinite;
+  animation: shimmer 5s linear infinite;
 }
 
 .gold-text {
-  background: linear-gradient(135deg, #e6c74a, #f0d060, #c9a227);
+  background: linear-gradient(135deg, #b89a00, #dec600, #f0d040);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.glass-card {
-  background: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+.brand-blue { color: #0374a7; }
+
+/* Card styles */
+.light-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(3, 116, 167, 0.12);
+  box-shadow: 0 4px 24px rgba(3, 116, 167, 0.08);
 }
 
-.glass-card-hover {
+.light-card-hover {
   transition: all 0.3s ease;
 }
-.glass-card-hover:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(41, 182, 246, 0.4);
+.light-card-hover:hover {
+  background: rgba(255, 255, 255, 0.97);
+  border-color: rgba(3, 116, 167, 0.3);
   transform: translateY(-4px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(41, 182, 246, 0.15);
-}
-
-.water-drop {
-  animation: water-drop 1.8s ease-in infinite;
+  box-shadow: 0 16px 40px rgba(3, 116, 167, 0.15);
 }
 
 .hero-gradient {
-  background: linear-gradient(180deg, rgba(10, 18, 35, 0) 0%, rgba(10, 18, 35, 0.6) 60%, rgba(10, 18, 35, 1) 100%);
+  background: linear-gradient(180deg, rgba(15, 35, 60, 0) 0%, rgba(15, 35, 60, 0.55) 55%, rgba(232, 239, 247, 1) 100%);
 }
+
+/* Message bubble animations */
+.msg-bubble {
+  animation: message-pop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+.msg-1 { animation-delay: 0.2s; }
+.msg-2 { animation-delay: 0.8s; }
+.msg-3 { animation-delay: 1.4s; }
+.msg-4 { animation-delay: 2.0s; }
+.msg-5 { animation-delay: 2.6s; }
+.msg-6 { animation-delay: 3.2s; }
