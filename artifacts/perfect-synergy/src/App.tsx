@@ -483,7 +483,7 @@ export default function App() {
           <CompanyCard
             name="Perfect Water Valve"
             tagline="Don't Pay for Air in Your Water"
-            secondTagline="Save at least 20% on your water bill. Guaranteed."
+            secondTagline="Save a minimum 15% on your water bill — that's $10,000+ back in your pocket."
             logo="/perfect-water-valve-logo.png"
             logoAlt="Perfect Water Valve"
             href="https://perfectwatervalve.com"
@@ -507,7 +507,7 @@ export default function App() {
             "Oh — and by the way... you know we do water valves too, right?"
           </h2>
           <p className="text-slate-300 text-base mb-4">
-            That client just saved <span className="gold-text font-bold">20% on their water bill</span> before they even knew they had a problem.
+            That client just saved <span className="gold-text font-bold">a minimum 15% on their water bill</span> — we're talking <span className="gold-text font-bold">$10,000+</span> — before they even knew they had a problem.
           </p>
           <p className="text-slate-500 text-sm italic">
             That's not upselling. That's just being a really, really good partner.
