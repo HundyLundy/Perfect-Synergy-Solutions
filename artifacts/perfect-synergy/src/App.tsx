@@ -83,34 +83,37 @@ function CompanyCard({
 function SynergyEquation() {
   return (
     <div className="animate-slide-up delay-700 flex flex-col items-center gap-6">
-      <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
-        {/* Parking chip */}
+      <div className="flex flex-wrap items-center justify-center gap-3 md:gap-5">
+
+        {/* Parking logo chip */}
         <div
-          className="flex items-center gap-3 rounded-xl px-5 py-3"
-          style={{ background: `${BRAND_BLUE}12`, border: `1px solid ${BRAND_BLUE}30` }}
+          className="flex items-center gap-3 rounded-2xl px-5 py-3"
+          style={{ background: `${BRAND_BLUE}10`, border: `1px solid ${BRAND_BLUE}28` }}
         >
-          <img src="/perfect-parking-logo.webp" alt="Perfect Parking" className="h-9 object-contain" />
+          <img src="/perfect-parking-logo.webp" alt="Perfect Parking" className="h-10 object-contain" />
+          <span className="font-bold text-sm hidden sm:block" style={{ color: BRAND_BLUE }}>Perfect Parking</span>
         </div>
 
         <span className="text-3xl font-black" style={{ color: "#9db0c4" }}>+</span>
 
-        {/* Water Valve chip */}
+        {/* Water Valve logo chip */}
         <div
-          className="flex items-center gap-3 rounded-xl px-5 py-3"
-          style={{ background: `${TEAL}12`, border: `1px solid ${TEAL}30` }}
+          className="flex items-center gap-3 rounded-2xl px-5 py-3"
+          style={{ background: `${TEAL}10`, border: `1px solid ${TEAL}28` }}
         >
-          <img src="/perfect-water-valve-logo.png" alt="Perfect Water Valve" className="h-9 object-contain" />
-          <span className="font-semibold text-sm" style={{ color: BRAND_BLUE }}>Perfect Water Valve</span>
+          <img src="/perfect-water-valve-logo.png" alt="Perfect Water Valve" className="h-10 object-contain" />
+          <span className="font-bold text-sm hidden sm:block" style={{ color: TEAL }}>Perfect Water Valve</span>
         </div>
 
         <span className="text-3xl font-black" style={{ color: "#9db0c4" }}>=</span>
 
-        {/* Result */}
+        {/* Result — colorful "Perfect Synergy Solutions" */}
         <div className="text-center">
-          <div className="shimmer-text text-2xl md:text-3xl font-black tracking-tight">
-            Perfect Synergy ✨
+          <div className="shimmer-text text-2xl md:text-3xl font-black tracking-tight leading-tight">
+            Perfect Synergy<br className="sm:hidden" />{" "}Solutions
           </div>
         </div>
+
       </div>
 
       <p className="text-slate-500 text-center text-sm max-w-md">
@@ -323,7 +326,7 @@ export default function App() {
       </header>
 
       {/* ── HERO ────────────────────────────────────────────── */}
-      <section className="relative min-h-screen flex flex-col items-center justify-center pt-20 pb-20 px-4 overflow-hidden">
+      <section className="relative flex flex-col items-center justify-center pt-20 pb-10 px-4 overflow-hidden" style={{ minHeight: "62vh" }}>
         {/* Hero image */}
         <div
           className="absolute inset-0 bg-cover bg-center"
@@ -418,11 +421,6 @@ export default function App() {
             </a>
           </div>
 
-          {/* Scroll nudge */}
-          <div className="animate-fade-in delay-800 mt-14 flex flex-col items-center gap-2 opacity-50">
-            <span className="text-xs text-slate-300 uppercase tracking-widest">Scroll down, it gets better</span>
-            <div className="w-0.5 h-8 mx-auto rounded-full" style={{ background: `linear-gradient(to bottom, ${TEAL}, transparent)` }} />
-          </div>
         </div>
       </section>
 
@@ -468,6 +466,9 @@ export default function App() {
         </div>
       </section>
 
+      {/* ── FACEBOOK FEEDS ─────────────────────────────────── */}
+      <FacebookFeeds />
+
       {/* ── SYNERGY GRAPHIC ──────────────────────────────── */}
       <section
         className="px-4 py-20"
@@ -500,9 +501,6 @@ export default function App() {
         </p>
       </section>
 
-      {/* ── FACEBOOK FEEDS ─────────────────────────────────── */}
-      <FacebookFeeds />
-
       {/* ── THE EQUATION ───────────────────────────────────── */}
       <section className="px-4 py-20 max-w-4xl mx-auto">
         <div
@@ -510,15 +508,9 @@ export default function App() {
           style={{ background: "white", border: `1px solid ${BRAND_BLUE}18`, boxShadow: "0 8px 40px rgba(3,116,167,0.08)" }}
         >
           <div className="text-center mb-8">
-            <p
-              className="text-xs font-bold uppercase tracking-widest mb-2"
-              style={{ color: GOLD }}
-            >
+            <p className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: GOLD }}>
               The math checks out
             </p>
-            <h2 className="text-2xl md:text-3xl font-black" style={{ color: "#1a2a3a" }}>
-              The Perfect Synergy Equation
-            </h2>
           </div>
           <SynergyEquation />
         </div>
