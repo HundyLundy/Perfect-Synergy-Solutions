@@ -309,7 +309,7 @@ export default function App() {
         style={{ background: BRAND_BLUE, boxShadow: "0 2px 16px rgba(3,116,167,0.25)" }}
       >
         <div className="flex items-center gap-3">
-          <div className="w-2 h-2 rounded-full" style={{ background: GOLD }} />
+          <img src="/favicon.png" alt="PSS" className="h-8 w-8 rounded-lg object-contain" />
           <div>
             <span className="text-white font-bold tracking-wide text-sm md:text-base">Perfect Synergy Solutions</span>
             <span className="hidden md:inline text-white/40 text-xs ml-2">perfectsynergypartners.com</span>
