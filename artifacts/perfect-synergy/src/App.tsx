@@ -312,7 +312,7 @@ export default function App() {
           <img src="/favicon.png" alt="PSS" className="h-8 w-8 rounded-lg object-contain" />
           <div>
             <span className="text-white font-bold tracking-wide text-sm md:text-base">Perfect Synergy Solutions</span>
-            <span className="hidden md:inline text-white/40 text-xs ml-2">perfectsynergypartners.com</span>
+            <span className="hidden md:inline text-white/40 text-xs ml-2">perfectsynergysolutions.com</span>
           </div>
         </div>
         <div className="hidden md:flex items-center gap-6 text-sm">
@@ -524,11 +524,7 @@ export default function App() {
         style={{ background: BRAND_BLUE }}
       >
         <div className="max-w-2xl mx-auto">
-          <p className="text-white font-bold text-lg mb-1">Perfect Synergy Solutions</p>
-          <p className="text-white/50 text-xs mb-5 italic">
-            (Yes, we're perfectsynergypartners.com. perfectsynergysolutions.com was taken.<br />
-            We'd like a word with whoever has it. 😤)
-          </p>
+          <p className="text-white font-bold text-lg mb-4">Perfect Synergy Solutions</p>
           <p className="text-white/70 text-sm mb-6">
             Making commercial properties run smoother —<br className="hidden md:block" />
             one parking spot and water valve at a time.
