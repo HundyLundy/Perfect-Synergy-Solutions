@@ -1,8 +1,4 @@
-import { useEffect, useRef, useState } from "react";
-
-declare global {
-  interface Window { FB?: { XFBML: { parse: (el?: HTMLElement) => void } }; }
-}
+import { useEffect, useState } from "react";
 
 /* ── Brand colours ─────────────────────────────────────────── */
 const BRAND_BLUE   = "#0374a7";
@@ -136,155 +132,37 @@ function AudienceBadge({ icon, label }: { icon: string; label: string }) {
   );
 }
 
-/* ── Facebook Feeds ─────────────────────────────────────────── */
-function FbPage({ href, accentColor }: { href: string; accentColor: string }) {
-  const ref = useRef<HTMLDivElement>(null);
+/* ── Stats Strip ─────────────────────────────────────────────── */
+const STATS = [
+  { value: "2", label: "Companies" },
+  { value: "1", label: "Mission" },
+  { value: "CO & TX", label: "Serving" },
+  { value: "Water + Parking", label: "= Maximum ROI" },
+];
 
-  useEffect(() => {
-    const tryParse = () => {
-      if (window.FB && ref.current) {
-        window.FB.XFBML.parse(ref.current);
-      }
-    };
-    tryParse();
-    const interval = setInterval(tryParse, 500);
-    const timer = setTimeout(() => clearInterval(interval), 5000);
-    return () => { clearInterval(interval); clearTimeout(timer); };
-  }, [href]);
-
+function StatsStrip() {
   return (
-    <div ref={ref}>
-      <div
-        className="fb-page"
-        data-href={href}
-        data-tabs="timeline"
-        data-width="500"
-        data-height="600"
-        data-small-header="true"
-        data-adapt-container-width="true"
-        data-hide-cover="false"
-        data-show-facepile="false"
-      />
-    </div>
-  );
-}
-
-const FB_ICON = (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-  </svg>
-);
-
-interface FeedCardProps {
-  logo: string;
-  alt: string;
-  name: string;
-  tagline: string;
-  pageUrl: string;
-  accentColor: string;
-  bgGradient: string;
-  fbHref: string;
-}
-
-function FeedCard({ logo, alt, name, tagline, pageUrl, accentColor, bgGradient, fbHref }: FeedCardProps) {
-  const feedRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const tryParse = () => {
-      if (window.FB && feedRef.current) {
-        window.FB.XFBML.parse(feedRef.current);
-      }
-    };
-    tryParse();
-    const id = setInterval(tryParse, 600);
-    const t = setTimeout(() => clearInterval(id), 6000);
-    return () => { clearInterval(id); clearTimeout(t); };
-  }, [fbHref]);
-
-  return (
-    <div className="flex flex-col rounded-2xl overflow-hidden animate-slide-up"
-      style={{ border: `1px solid ${accentColor}20`, boxShadow: `0 8px 32px ${accentColor}14` }}>
-
-      {/* Card header */}
-      <div className="px-6 py-5 flex items-center gap-4" style={{ background: bgGradient }}>
-        <div className="bg-white/15 rounded-xl p-1.5 flex-shrink-0">
-          <img src={logo} alt={alt} className="h-8 object-contain" style={{ maxWidth: 120 }} />
-        </div>
-        <div>
-          <p className="font-bold text-white text-base leading-tight">{name}</p>
-          <p className="text-white/70 text-xs mt-0.5">{tagline}</p>
-        </div>
-      </div>
-
-      {/* FB feed — loads on live domain; empty in dev */}
-      <div ref={feedRef} className="w-full bg-white" style={{ minHeight: 520 }}>
-        <div
-          className="fb-page"
-          data-href={fbHref}
-          data-tabs="timeline"
-          data-width="500"
-          data-height="520"
-          data-small-header="true"
-          data-adapt-container-width="true"
-          data-hide-cover="true"
-          data-show-facepile="false"
-        />
-      </div>
-
-      {/* Footer link */}
-      <div className="px-6 py-4 flex items-center justify-between bg-white border-t"
-        style={{ borderColor: `${accentColor}14` }}>
-        <span className="text-xs text-gray-400">Follow for the latest updates</span>
-        <a
-          href={fbHref}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 text-sm font-bold px-4 py-2 rounded-full text-white transition-opacity hover:opacity-90"
-          style={{ background: accentColor }}
-        >
-          {FB_ICON} Follow
-        </a>
-      </div>
-    </div>
-  );
-}
-
-function FacebookFeeds() {
-  return (
-    <section className="px-4 py-20 max-w-5xl mx-auto">
-      <div className="text-center mb-12 animate-slide-up">
-        <p className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: BRAND_BLUE }}>
-          Latest Updates
-        </p>
-        <h2 className="text-3xl md:text-4xl font-black" style={{ color: "#1a2a3a" }}>
-          What we've been up to
-        </h2>
-        <p className="text-gray-500 mt-3 text-sm max-w-md mx-auto">
-          Follow each brand on Facebook — their latest posts show up right here.
-        </p>
-      </div>
-
-      <div className="grid md:grid-cols-2 gap-8">
-        <FeedCard
-          logo="/perfect-parking-logo.webp"
-          alt="Perfect Parking"
-          name="Perfect Parking"
-          tagline="Managed parking → real revenue"
-          pageUrl="https://perfectparking.com"
-          accentColor={BRAND_BLUE}
-          bgGradient={`linear-gradient(135deg, ${BRAND_BLUE}, #025f8a)`}
-          fbHref="https://www.facebook.com/PerfectParking/"
-        />
-        <FeedCard
-          logo="/perfect-water-valve-logo.png"
-          alt="Perfect Water Valve"
-          name="Perfect Water Valve"
-          tagline="Cut your water bill by 20%"
-          pageUrl="https://perfectwatervalve.com"
-          accentColor={TEAL}
-          bgGradient={`linear-gradient(135deg, ${TEAL}, #1482a0)`}
-          fbHref="https://www.facebook.com/profile.php?id=61583769211912"
-        />
+    <section
+      className="py-12 px-4"
+      style={{ background: `linear-gradient(135deg, ${BRAND_BLUE}, #025a85)` }}
+    >
+      <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-0 md:divide-x md:divide-white/20">
+        {STATS.map(({ value, label }) => (
+          <div key={label} className="flex flex-col items-center text-center px-6 py-2 animate-slide-up">
+            <span
+              className="text-2xl md:text-3xl font-black mb-1"
+              style={{
+                background: `linear-gradient(90deg, ${GOLD}, #f0e060)`,
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+              }}
+            >
+              {value}
+            </span>
+            <span className="text-white/75 text-sm font-medium uppercase tracking-wide">{label}</span>
+          </div>
+        ))}
       </div>
     </section>
   );
@@ -468,8 +346,8 @@ export default function App() {
         </div>
       </section>
 
-      {/* ── FACEBOOK FEEDS ─────────────────────────────────── */}
-      <FacebookFeeds />
+      {/* ── STATS STRIP ────────────────────────────────────── */}
+      <StatsStrip />
 
       {/* ── SYNERGY GRAPHIC ──────────────────────────────── */}
       <section
