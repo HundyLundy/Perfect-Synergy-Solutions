@@ -168,6 +168,177 @@ function StatsStrip() {
   );
 }
 
+/* ── Contact Section ─────────────────────────────────────────── */
+const PROPERTY_TYPES = [
+  "Commercial Real Estate",
+  "Hotel / Resort",
+  "Hospital / Healthcare",
+  "HOA",
+  "Other",
+];
+
+function ContactSection() {
+  const [form, setForm] = useState({
+    firstName: "", lastName: "", email: "", phone: "", propertyType: "", message: "",
+  });
+  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    setForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus("submitting");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      const data = await res.json();
+      setStatus(data.ok ? "success" : "error");
+    } catch {
+      setStatus("error");
+    }
+  };
+
+  const inputClass = "w-full rounded-xl px-4 py-3 text-sm border outline-none transition-all focus:ring-2";
+  const inputStyle = { borderColor: `${BRAND_BLUE}28`, background: "#f8fbfd" };
+  const inputFocusStyle = { "--tw-ring-color": BRAND_BLUE } as React.CSSProperties;
+
+  return (
+    <section className="px-4 py-20" style={{ background: `linear-gradient(135deg, ${BRAND_BLUE}06, ${TEAL}0a)` }}>
+      <div className="max-w-3xl mx-auto">
+
+        {/* Heading */}
+        <div className="text-center mb-10 animate-slide-up">
+          <p className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: TEAL }}>
+            Let's Talk
+          </p>
+          <h2 className="text-3xl md:text-4xl font-black mb-3" style={{ color: "#1a2a3a" }}>
+            Work With Both Divisions
+          </h2>
+          <p className="text-slate-500 text-base max-w-xl mx-auto">
+            Get a free consultation on how Perfect Water Valve + Perfect Parking can work together on your property.
+          </p>
+        </div>
+
+        {/* Card */}
+        <div
+          className="rounded-3xl p-8 md:p-10 animate-slide-up delay-100"
+          style={{ background: "white", border: `1px solid ${BRAND_BLUE}15`, boxShadow: "0 12px 48px rgba(3,116,167,0.10)" }}
+        >
+          {status === "success" ? (
+            <div className="text-center py-10">
+              <div className="text-5xl mb-4">🎉</div>
+              <h3 className="text-2xl font-black mb-2" style={{ color: "#1a2a3a" }}>We got your message!</h3>
+              <p className="text-slate-500">Someone from our team will be in touch shortly.</p>
+              <button
+                onClick={() => { setStatus("idle"); setForm({ firstName: "", lastName: "", email: "", phone: "", propertyType: "", message: "" }); }}
+                className="mt-6 text-sm font-semibold underline"
+                style={{ color: BRAND_BLUE }}
+              >
+                Send another message
+              </button>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="space-y-5">
+              {/* Name row */}
+              <div className="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-xs font-bold uppercase tracking-wide mb-1.5" style={{ color: "#4a6070" }}>First Name *</label>
+                  <input
+                    name="firstName" value={form.firstName} onChange={handleChange} required
+                    placeholder="Jane"
+                    className={inputClass}
+                    style={{ ...inputStyle, ...inputFocusStyle }}
+                  />
+                </div>
+                <div>
+                  <label className="block text-xs font-bold uppercase tracking-wide mb-1.5" style={{ color: "#4a6070" }}>Last Name *</label>
+                  <input
+                    name="lastName" value={form.lastName} onChange={handleChange} required
+                    placeholder="Smith"
+                    className={inputClass}
+                    style={{ ...inputStyle, ...inputFocusStyle }}
+                  />
+                </div>
+              </div>
+
+              {/* Email + Phone */}
+              <div className="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-xs font-bold uppercase tracking-wide mb-1.5" style={{ color: "#4a6070" }}>Email *</label>
+                  <input
+                    name="email" type="email" value={form.email} onChange={handleChange} required
+                    placeholder="jane@yourproperty.com"
+                    className={inputClass}
+                    style={{ ...inputStyle, ...inputFocusStyle }}
+                  />
+                </div>
+                <div>
+                  <label className="block text-xs font-bold uppercase tracking-wide mb-1.5" style={{ color: "#4a6070" }}>Phone</label>
+                  <input
+                    name="phone" type="tel" value={form.phone} onChange={handleChange}
+                    placeholder="(720) 555-0100"
+                    className={inputClass}
+                    style={{ ...inputStyle, ...inputFocusStyle }}
+                  />
+                </div>
+              </div>
+
+              {/* Property Type */}
+              <div>
+                <label className="block text-xs font-bold uppercase tracking-wide mb-1.5" style={{ color: "#4a6070" }}>Property Type *</label>
+                <select
+                  name="propertyType" value={form.propertyType} onChange={handleChange} required
+                  className={inputClass}
+                  style={{ ...inputStyle, ...inputFocusStyle }}
+                >
+                  <option value="">Select a property type…</option>
+                  {PROPERTY_TYPES.map(t => <option key={t} value={t}>{t}</option>)}
+                </select>
+              </div>
+
+              {/* Message */}
+              <div>
+                <label className="block text-xs font-bold uppercase tracking-wide mb-1.5" style={{ color: "#4a6070" }}>Message</label>
+                <textarea
+                  name="message" value={form.message} onChange={handleChange}
+                  rows={4}
+                  placeholder="Tell us about your property — square footage, current parking situation, monthly water spend, etc."
+                  className={inputClass}
+                  style={{ ...inputStyle, ...inputFocusStyle, resize: "vertical" }}
+                />
+              </div>
+
+              {/* Error */}
+              {status === "error" && (
+                <p className="text-sm text-red-500">Something went wrong — please try again or email us directly.</p>
+              )}
+
+              {/* Submit */}
+              <button
+                type="submit"
+                disabled={status === "submitting"}
+                className="w-full py-4 rounded-xl font-bold text-white text-base transition-all hover:opacity-90 hover:shadow-lg disabled:opacity-60"
+                style={{ background: `linear-gradient(135deg, ${BRAND_BLUE}, ${TEAL})` }}
+              >
+                {status === "submitting" ? "Sending…" : "Get My Free Consultation →"}
+              </button>
+
+              <p className="text-center text-xs text-slate-400">
+                No sales pressure. Just two solutions that actually work.
+              </p>
+            </form>
+          )}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 /* ── App ────────────────────────────────────────────────────── */
 export default function App() {
   const [scrollY, setScrollY] = useState(0);
@@ -380,6 +551,9 @@ export default function App() {
           That's not upselling. That's just being an exceptionally good partner.
         </p>
       </section>
+
+      {/* ── CONTACT ────────────────────────────────────────── */}
+      <ContactSection />
 
       {/* ── THE EQUATION ───────────────────────────────────── */}
       <section className="px-4 py-20 max-w-4xl mx-auto">
