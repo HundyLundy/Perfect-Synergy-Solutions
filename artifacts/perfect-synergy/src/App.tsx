@@ -369,7 +369,7 @@ export default function App() {
             className="text-white/80 hover:text-white transition-colors font-medium">
             Perfect Parking
           </a>
-          <a href="https://perfectwatervalve.com" target="_blank" rel="noopener noreferrer"
+          <a href="https://www.perfectwatervalve.com" target="_blank" rel="noopener noreferrer"
             className="text-white/80 hover:text-white transition-colors font-medium">
             Perfect Water Valve
           </a>
@@ -462,7 +462,7 @@ export default function App() {
               🚗 Turn Parking into Profits
             </a>
             <a
-              href="https://perfectwatervalve.com"
+              href="https://www.perfectwatervalve.com"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-bold transition-all duration-300 hover:scale-105 hover:shadow-xl"
@@ -509,7 +509,7 @@ export default function App() {
             highlight="✦ 15% savings guaranteed — or we don't get paid."
             logo="/perfect-water-valve-logo.png"
             logoAlt="Perfect Water Valve"
-            href="https://perfectwatervalve.com"
+            href="https://www.perfectwatervalve.com"
             email="info@perfectwatervalve.com"
             accentColor={TEAL}
             delay={200}
@@ -587,7 +587,7 @@ export default function App() {
               perfectparking.com
             </a>
             <span className="text-white/30">·</span>
-            <a href="https://perfectwatervalve.com" target="_blank" rel="noopener noreferrer"
+            <a href="https://www.perfectwatervalve.com" target="_blank" rel="noopener noreferrer"
               className="text-white/70 hover:text-white transition-colors">
               perfectwatervalve.com
             </a>
