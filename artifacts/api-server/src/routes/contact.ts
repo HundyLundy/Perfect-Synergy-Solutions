@@ -1,7 +1,7 @@
 import { Router } from "express";
 import { logger } from "../lib/logger";
 
-const WEBHOOK_URL = "https://hook.make.com/inN/webhook-trigger/Upp1pos3mL7UjdCVKsJp";
+const WEBHOOK_URL = "https://services.leadconnectorhq.com/hooks/ZF2Qjd4J1GmT9w5XbinN/webhook-trigger/Upp1pos3mL7UjdCVKsJp";
 
 const contactRouter = Router();
 
