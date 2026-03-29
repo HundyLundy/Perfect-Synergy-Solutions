@@ -21,7 +21,7 @@ contactRouter.post("/contact", async (req, res) => {
     propertyType,
     message: message || "",
     source: "perfect-synergy-solutions",
-    division: "perfect-combo",
+    division: "combo",
     submittedAt: new Date().toISOString(),
   };
 
