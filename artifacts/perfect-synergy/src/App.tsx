@@ -552,6 +552,63 @@ export default function App() {
         </p>
       </section>
 
+      {/* ── OUR STORY ───────────────────────────────────────── */}
+      <section className="px-4 py-20" style={{ background: "#f7fafd", borderTop: `3px solid ${BRAND_BLUE}18`, borderBottom: `3px solid ${BRAND_BLUE}18` }}>
+        <div className="max-w-3xl mx-auto">
+          <p className="text-xs font-bold uppercase tracking-widest mb-3 text-center" style={{ color: BRAND_BLUE }}>
+            Our Story
+          </p>
+          <h2 className="text-3xl md:text-4xl font-black mb-10 text-center" style={{ color: "#1a2a3a" }}>
+            Two cousins. Two companies. One thesis.
+          </h2>
+
+          <div className="space-y-5 text-slate-600 text-base md:text-lg leading-relaxed">
+            <p>
+              Cooper Lundquist has always been an entrepreneur. That's just who he is.
+            </p>
+            <p>
+              He's built businesses, shut businesses down, and built again — not because it was easy, but because sitting still was never really an option. His first venture with Hunter was <strong className="text-slate-700">Lundy's Powder Coating</strong>. They figured a lot out. They also figured out that the costs were more than they could absorb at the time, and they made the call to shut it down. No drama. Just honest math.
+            </p>
+            <p>
+              Hunter moved to Denver. Seven years passed.
+            </p>
+            <p>
+              Then Cooper called.
+            </p>
+            <p>
+              He had two companies — <strong style={{ color: BRAND_BLUE }}>Perfect Parking</strong> and <strong style={{ color: TEAL }}>Perfect Water Valve</strong> — that he'd started but hadn't fully built out yet. The idea was solid. The timing was right. And he needed someone he trusted to come help him build it for real this time.
+            </p>
+            <p>
+              Hunter came back. That's January 2026. That's where this starts.
+            </p>
+
+            <div className="my-8 rounded-2xl p-6 md:p-8 space-y-4" style={{ background: "white", border: `1px solid ${BRAND_BLUE}20`, boxShadow: "0 4px 24px rgba(3,116,167,0.07)" }}>
+              <p>
+                <strong style={{ color: BRAND_BLUE }}>Perfect Parking</strong> turns underused commercial parking into consistent monthly revenue — with zero operational burden on the property owner. No staff. No overhead. Just income.
+              </p>
+              <p>
+                <strong style={{ color: TEAL }}>Perfect Water Valve</strong> installs smart valve technology that reduces commercial water consumption by 20–40%, cutting one of the most overlooked line items on any property's operating budget.
+              </p>
+              <p>
+                The same commercial property owner who needs one almost always needs the other. That's not a coincidence — that's the model.
+              </p>
+            </div>
+
+            <p>
+              <strong style={{ color: BRAND_BLUE }}>Perfect Synergy Solutions</strong> is the holding company that ties it together. Two cousins, two companies, one thesis: commercial property owners are leaving money on the table every single month in ways they can't see. We're here to fix that.
+            </p>
+            <p>
+              We're early. We're working hard. And we're just getting started.
+            </p>
+          </div>
+
+          <div className="mt-10 pt-8 border-t text-right" style={{ borderColor: `${BRAND_BLUE}20` }}>
+            <p className="text-lg font-bold" style={{ color: "#1a2a3a" }}>— Hunter &amp; Cooper Lundquist</p>
+            <p className="text-sm text-slate-400 mt-1">Perfect Synergy Solutions · Colorado &amp; Texas</p>
+          </div>
+        </div>
+      </section>
+
       {/* ── CONTACT ────────────────────────────────────────── */}
       <ContactSection />
 
