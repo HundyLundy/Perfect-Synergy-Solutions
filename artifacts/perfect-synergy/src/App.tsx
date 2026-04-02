@@ -564,7 +564,16 @@ export default function App() {
             </p>
           </div>
 
-          <div className="mt-10 pt-8 border-t text-right" style={{ borderColor: `${BRAND_BLUE}20` }}>
+          <div className="mt-10">
+            <img
+              src="/founders-photo.jpg"
+              alt="Hunter and Cooper Lundquist"
+              className="w-full rounded-2xl object-cover"
+              style={{ maxHeight: "480px", objectPosition: "center top", boxShadow: "0 8px 32px rgba(3,116,167,0.12)" }}
+            />
+          </div>
+
+          <div className="mt-8 pt-8 border-t text-right" style={{ borderColor: `${BRAND_BLUE}20` }}>
             <p className="text-lg font-bold" style={{ color: "#1a2a3a" }}>— Hunter &amp; Cooper Lundquist</p>
           </div>
         </div>
