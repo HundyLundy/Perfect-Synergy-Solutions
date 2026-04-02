@@ -529,22 +529,19 @@ export default function App() {
 
           <div className="space-y-5 text-slate-600 text-base md:text-lg leading-relaxed">
             <p>
-              Cooper Lundquist has always been an entrepreneur. That's just who he is.
+              Cooper's been an entrepreneur for most of his adult life. He's learned what works, what doesn't, and when to cut his losses and move on.
             </p>
             <p>
-              He's built businesses, shut businesses down, and built again — not because it was easy, but because sitting still was never really an option. His first venture with Hunter was <strong className="text-slate-700">Lundy's Powder Coating</strong>. They figured a lot out. They also figured out that the costs were more than they could absorb at the time, and they made the call to shut it down. No drama. Just honest math.
+              His first venture with Hunter was <strong className="text-slate-700">Lundy's Powder Coating</strong>. He invited Hunter to help run it, and it turned out their skills fit together pretty well. They figured a lot out. They also figured out that the costs weren't going to work, and they made the call to shut it down. No drama. Just honest math.
             </p>
             <p>
-              Hunter moved to Denver. Seven years passed.
+              Hunter moved on. Seven years passed.
             </p>
             <p>
-              Then Cooper called.
+              Then Cooper called again.
             </p>
             <p>
-              He had two companies — <strong style={{ color: BRAND_BLUE }}>Perfect Parking</strong> and <strong style={{ color: TEAL }}>Perfect Water Valve</strong> — that he'd started but hadn't fully built out yet. The idea was solid. The timing was right. And he needed someone he trusted to come help him build it for real this time.
-            </p>
-            <p>
-              Hunter came back. That's January 2026. That's where this starts.
+              He'd been building two companies — <strong style={{ color: BRAND_BLUE }}>Perfect Parking</strong> and <strong style={{ color: TEAL }}>Perfect Water Valve</strong> — and needed someone he trusted to help him take them somewhere real. Hunter came back. That's where this starts.
             </p>
 
             <div className="my-8 rounded-2xl p-6 md:p-8 space-y-4" style={{ background: "white", border: `1px solid ${BRAND_BLUE}20`, boxShadow: "0 4px 24px rgba(3,116,167,0.07)" }}>
@@ -569,7 +566,6 @@ export default function App() {
 
           <div className="mt-10 pt-8 border-t text-right" style={{ borderColor: `${BRAND_BLUE}20` }}>
             <p className="text-lg font-bold" style={{ color: "#1a2a3a" }}>— Hunter &amp; Cooper Lundquist</p>
-            <p className="text-sm text-slate-400 mt-1">Perfect Synergy Solutions · Colorado &amp; Texas</p>
           </div>
         </div>
       </section>
