@@ -517,41 +517,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* ── STATS STRIP ────────────────────────────────────── */}
-      <StatsStrip />
-
-      {/* ── SYNERGY GRAPHIC ──────────────────────────────── */}
-      <section
-        className="px-4 py-20"
-        style={{ background: `linear-gradient(135deg, ${BRAND_BLUE}08, ${TEAL}0d)` }}
-      >
-        <div className="max-w-4xl mx-auto text-center mb-10 animate-slide-up">
-          <p className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: BRAND_BLUE }}>
-            The full picture
-          </p>
-          <h2 className="text-3xl md:text-4xl font-black mb-3" style={{ color: "#1a2a3a" }}>
-            We literally put money back in your pocket.
-          </h2>
-          <p className="text-slate-500 text-base max-w-xl mx-auto">
-            Monetize your parking. Slash your water bill. 
-            Your CFO gets a raise. <span className="italic">(At least that's how we see it.)</span>
-          </p>
-        </div>
-
-        <div className="max-w-4xl mx-auto rounded-2xl overflow-hidden animate-slide-up delay-200" style={{ background: "white", border: `1px solid ${BRAND_BLUE}15`, boxShadow: "0 8px 40px rgba(3,116,167,0.10)" }}>
-          <img
-            src={`/synergy-graphic.png?v=${Date.now()}`}
-            alt="Perfect Parking and Perfect Water Valve mascots handing money to a happy building owner"
-            className="w-full object-cover"
-            style={{ maxHeight: "480px", objectPosition: "center" }}
-          />
-        </div>
-
-        <p className="text-center text-slate-400 text-sm mt-5 italic animate-slide-up delay-400">
-          That's not upselling. That's just being an exceptionally good partner.
-        </p>
-      </section>
-
       {/* ── OUR STORY ───────────────────────────────────────── */}
       <section className="px-4 py-20" style={{ background: "#f7fafd", borderTop: `3px solid ${BRAND_BLUE}18`, borderBottom: `3px solid ${BRAND_BLUE}18` }}>
         <div className="max-w-3xl mx-auto">
@@ -607,6 +572,35 @@ export default function App() {
             <p className="text-sm text-slate-400 mt-1">Perfect Synergy Solutions · Colorado &amp; Texas</p>
           </div>
         </div>
+      </section>
+
+      {/* ── SYNERGY GRAPHIC ──────────────────────────────── */}
+      <section
+        className="px-4 py-20"
+        style={{ background: `linear-gradient(135deg, ${BRAND_BLUE}08, ${TEAL}0d)` }}
+      >
+        <div className="max-w-4xl mx-auto text-center mb-10 animate-slide-up">
+          <h2 className="text-3xl md:text-4xl font-black mb-3" style={{ color: "#1a2a3a" }}>
+            We literally put money back in your pocket.
+          </h2>
+          <p className="text-slate-500 text-base max-w-xl mx-auto">
+            Monetize your parking. Slash your water bill. 
+            Your CFO gets a raise. <span className="italic">(At least that's how we see it.)</span>
+          </p>
+        </div>
+
+        <div className="max-w-4xl mx-auto rounded-2xl overflow-hidden animate-slide-up delay-200" style={{ background: "white", border: `1px solid ${BRAND_BLUE}15`, boxShadow: "0 8px 40px rgba(3,116,167,0.10)" }}>
+          <img
+            src={`/synergy-graphic.png?v=${Date.now()}`}
+            alt="Perfect Parking and Perfect Water Valve mascots handing money to a happy building owner"
+            className="w-full object-cover"
+            style={{ maxHeight: "480px", objectPosition: "center" }}
+          />
+        </div>
+
+        <p className="text-center text-slate-400 text-sm mt-5 italic animate-slide-up delay-400">
+          That's not upselling. That's just being an exceptionally good partner.
+        </p>
       </section>
 
       {/* ── CONTACT ────────────────────────────────────────── */}
