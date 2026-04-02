@@ -82,24 +82,30 @@ function SynergyEquation() {
       <div className="flex flex-wrap items-center justify-center gap-3 md:gap-5">
 
         {/* Parking logo chip */}
-        <div
-          className="flex items-center gap-3 rounded-2xl px-5 py-3"
+        <a
+          href="https://perfectparking.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-3 rounded-2xl px-5 py-3 transition-all duration-200 hover:scale-105 hover:shadow-md"
           style={{ background: `${BRAND_BLUE}10`, border: `1px solid ${BRAND_BLUE}28` }}
         >
           <img src="/perfect-parking-logo.webp" alt="Perfect Parking" className="h-10 object-contain" />
           <span className="font-bold text-sm hidden sm:block" style={{ color: BRAND_BLUE }}>Perfect Parking</span>
-        </div>
+        </a>
 
         <span className="text-3xl font-black" style={{ color: "#9db0c4" }}>+</span>
 
         {/* Water Valve logo chip */}
-        <div
-          className="flex items-center gap-3 rounded-2xl px-5 py-3"
+        <a
+          href="https://www.perfectwatervalve.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-3 rounded-2xl px-5 py-3 transition-all duration-200 hover:scale-105 hover:shadow-md"
           style={{ background: `${TEAL}10`, border: `1px solid ${TEAL}28` }}
         >
           <img src="/perfect-water-valve-logo.png" alt="Perfect Water Valve" className="h-10 object-contain" />
           <span className="font-bold text-sm hidden sm:block" style={{ color: TEAL }}>Perfect Water Valve</span>
-        </div>
+        </a>
 
         <span className="text-3xl font-black" style={{ color: "#9db0c4" }}>=</span>
 
@@ -208,7 +214,7 @@ function ContactSection() {
   const inputFocusStyle = { "--tw-ring-color": BRAND_BLUE } as React.CSSProperties;
 
   return (
-    <section className="px-4 py-20" style={{ background: `linear-gradient(135deg, ${BRAND_BLUE}06, ${TEAL}0a)` }}>
+    <section className="px-4 py-14" style={{ background: `linear-gradient(135deg, ${BRAND_BLUE}06, ${TEAL}0a)` }}>
       <div className="max-w-3xl mx-auto">
 
         {/* Heading */}
@@ -476,7 +482,7 @@ export default function App() {
       </section>
 
       {/* ── TWO SOLUTIONS ──────────────────────────────────── */}
-      <section className="px-4 py-20 max-w-5xl mx-auto">
+      <section className="px-4 py-14 max-w-5xl mx-auto">
         <div className="text-center mb-12 animate-slide-up">
           <p
             className="text-xs font-bold uppercase tracking-widest mb-3"
@@ -518,13 +524,10 @@ export default function App() {
       </section>
 
       {/* ── OUR STORY ───────────────────────────────────────── */}
-      <section className="px-4 py-20" style={{ background: "#f7fafd", borderTop: `3px solid ${BRAND_BLUE}18`, borderBottom: `3px solid ${BRAND_BLUE}18` }}>
+      <section className="px-4 py-14" style={{ background: "#f7fafd", borderTop: `3px solid ${BRAND_BLUE}18`, borderBottom: `3px solid ${BRAND_BLUE}18` }}>
         <div className="max-w-3xl mx-auto">
-          <p className="text-xs font-bold uppercase tracking-widest mb-3 text-center" style={{ color: BRAND_BLUE }}>
+          <h2 className="text-5xl md:text-6xl font-black mb-10 text-center" style={{ color: "#1a2a3a" }}>
             Our Story
-          </p>
-          <h2 className="text-3xl md:text-4xl font-black mb-10 text-center" style={{ color: "#1a2a3a" }}>
-            Two cousins. Two companies. One thesis.
           </h2>
 
           <div className="space-y-5 text-slate-600 text-base md:text-lg leading-relaxed">
@@ -532,10 +535,10 @@ export default function App() {
               Cooper's been an entrepreneur for most of his adult life. He's learned what works, what doesn't, and when to cut his losses and move on.
             </p>
             <p>
-              His first venture with Hunter was <strong className="text-slate-700">Lundy's Powder Coating</strong>. He invited Hunter to help run it, and it turned out their skills fit together pretty well. They figured a lot out. They also figured out that the costs weren't going to work, and they made the call to shut it down. No drama. Just honest math.
+              His first venture with Hunter was Lundy's Powder Coating. He invited Hunter to help run it, and it turned out their skills fit together pretty well. They figured a lot out. They also figured out that the costs weren't going to work, and they made the call to shut it down. No drama. Just honest math.
             </p>
             <p>
-              Hunter moved on. Seven years passed.
+              Hunter moved to Denver. Seven years passed.
             </p>
             <p>
               Then Cooper called again.
@@ -581,7 +584,7 @@ export default function App() {
 
       {/* ── SYNERGY GRAPHIC ──────────────────────────────── */}
       <section
-        className="px-4 py-20"
+        className="px-4 py-14"
         style={{ background: `linear-gradient(135deg, ${BRAND_BLUE}08, ${TEAL}0d)` }}
       >
         <div className="max-w-4xl mx-auto text-center mb-10 animate-slide-up">
@@ -612,7 +615,7 @@ export default function App() {
       <ContactSection />
 
       {/* ── THE EQUATION ───────────────────────────────────── */}
-      <section className="px-4 py-20 max-w-4xl mx-auto">
+      <section className="px-4 py-14 max-w-4xl mx-auto">
         <div
           className="rounded-3xl p-8 md:p-12 animate-slide-up"
           style={{ background: "white", border: `1px solid ${BRAND_BLUE}18`, boxShadow: "0 8px 40px rgba(3,116,167,0.08)" }}
@@ -628,7 +631,7 @@ export default function App() {
 
       {/* ── FOOTER ─────────────────────────────────────────── */}
       <footer
-        className="px-4 py-12 text-center"
+        className="px-4 py-8 text-center"
         style={{ background: BRAND_BLUE }}
       >
         <div className="max-w-2xl mx-auto">
