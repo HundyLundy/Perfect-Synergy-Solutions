@@ -426,7 +426,7 @@ export default function App() {
 
           {/* Headline */}
           <h1 className="animate-slide-up text-5xl md:text-7xl lg:text-8xl font-black leading-none mb-5 text-white">
-            What a{" "}
+            We Stop{" "}
             <span style={{
               background: `linear-gradient(90deg, ${GOLD}, #f0e060, ${GOLD})`,
               backgroundSize: "200% auto",
@@ -434,28 +434,20 @@ export default function App() {
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
             }}>
-              Perfect
+              Two Leaks
             </span>
             <br />
-            <span style={{
-              background: `linear-gradient(90deg, ${GOLD}, #f0e060, ${GOLD})`,
-              backgroundSize: "200% auto",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text",
-            }}>
-              Synergy.
-            </span>
+            at Once.
           </h1>
 
           {/* Sub */}
           <p className="animate-slide-up delay-200 text-xl md:text-2xl text-slate-200 mb-4 max-w-2xl mx-auto leading-relaxed">
-            Your parking is losing money every day.
+            Unused parking = lost revenue. Air bubbles in your water = inflated bills.
             <br />
-            <span className="text-white font-semibold">Your water bill probably is too.</span>
+            <span className="text-white font-semibold">Both are fixable. Today.</span>
           </p>
           <p className="animate-slide-up delay-300 text-base text-slate-300 mb-10 italic">
-            Fortunately, we fix both. You're welcome. 😎
+            Two problems. Two solutions. One call.
           </p>
 
           {/* CTAs */}
