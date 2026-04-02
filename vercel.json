@@ -1,0 +1,6 @@
+{
+  "buildCommand": "pnpm install --frozen-lockfile && pnpm --filter @workspace/perfect-synergy run build",
+  "outputDirectory": "artifacts/perfect-synergy/dist/public",
+  "installCommand": "echo skip",
+  "framework": null
+}
