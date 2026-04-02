@@ -426,7 +426,7 @@ export default function App() {
 
           {/* Headline */}
           <h1 className="animate-slide-up text-5xl md:text-7xl lg:text-8xl font-black leading-none mb-5 text-white">
-            We Stop{" "}
+            We{" "}
             <span style={{
               background: `linear-gradient(90deg, ${GOLD}, #f0e060, ${GOLD})`,
               backgroundSize: "200% auto",
@@ -434,7 +434,7 @@ export default function App() {
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
             }}>
-              Two Leaks
+              Stop Two Leaks
             </span>
             <br />
             at Once.
