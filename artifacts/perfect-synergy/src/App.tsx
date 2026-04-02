@@ -418,8 +418,8 @@ export default function App() {
           {/* Audience chips */}
           <div className="animate-fade-in flex flex-wrap justify-center gap-2 mb-8">
             <AudienceBadge icon="🖥️" label="Data Centers" />
-            <AudienceBadge icon="🏨" label="Hotels & Resorts" />
-            <AudienceBadge icon="🏥" label="Hospitals & Healthcare" />
+            <AudienceBadge icon="🏨" label="Hotels" />
+            <AudienceBadge icon="🏥" label="Hospitals" />
             <AudienceBadge icon="🏢" label="Commercial Real Estate" />
             <AudienceBadge icon="🚗" label="Car Washes" />
           </div>
